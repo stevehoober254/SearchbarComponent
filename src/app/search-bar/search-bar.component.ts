@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { invalid } from '@angular/compiler/src/render3/view/util';
+import { ApicallsService } from './apicalls.service';
+import { Results } from '../model/results';
 
 
 @Component({
@@ -17,9 +18,11 @@ export class SearchBarComponent implements OnInit {
   miles = []
 
   searchForm: FormGroup;
+  results : Results;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private service: ApicallsService
   ) {
     this.searchForm = formBuilder.group({
       Keyword: [this.keyword, Validators.required],
@@ -29,7 +32,7 @@ export class SearchBarComponent implements OnInit {
   }
 
   ngOnInit() {
-    for(var i = 1;i<16;i++){
+    for (var i = 1; i < 16; i++) {
       this.miles.push(i);
     }
   }
@@ -38,6 +41,18 @@ export class SearchBarComponent implements OnInit {
 
   search() {
     console.log(this.searchForm.value);
+    // set parameters for search
+    let keyword = this.searchForm.value.Keyword;
+    let location = this.searchForm.value.Location;
+    let distance = this.searchForm.value.Distance;
+    
+    // send params to service
+    this.service.getJobs(keyword,location,distance).subscribe(res => {
+      console.log('search results',res);
+      this.results = res ;
+    },err => {
+      console.log(err);
+    })
 
   }
 

@@ -1,3 +1,19 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 <div class="container">
-JSON RESULTS HERE
+    <label class="tag">RESULTS HERE</label>
+<table class="table">
+    <tr *ngFor="let item of results">
+        <td class="logo">
+            <img [src]="item.company_logo">
+        </td>
+        <td class="desc">
+            <label>{{item.title}}</label><br>
+            <a href="{{item.company_url}}">{{item.company}}</a><label>{{item.Location}}</label><br>
+            <label>{{item.created_at}}</label><br>
+            <label>{{item.how_to_apply}}</label>
+        </td>
+    </tr>
+</table>
 </div>

@@ -17,7 +17,7 @@
       <label class="label">Distance</label><br>
       <select type="text" formControlName="Distance" class="input select" >
         <option value="" disabled selected>Up To 15 Miles</option>
-        <option *ngFor="let n of miles" value="{{n}}">{{n}} Miles</option>
+        <option *ngFor="let n of miles" value="{{n}} Miles">{{n}} Miles</option>
       </select>&nbsp;
     </div>
     <div class="container">
@@ -29,3 +29,5 @@
     <div id="Bar"></div>
   </div>
 </div>
+
+<app-results [results]="results"></app-results>
