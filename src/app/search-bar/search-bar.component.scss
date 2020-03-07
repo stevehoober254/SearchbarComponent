@@ -1,0 +1,50 @@
+.searchbar {
+  background-color: rgb(17, 11, 11);
+  color: white;
+}
+.label{
+  color: white;
+}
+.input{
+  height: 50px;
+  width: 300px;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 1.1em;
+  text-align: center;
+  
+}
+.select{
+  height: 55px;
+}
+button{
+  height: 55px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: orange;
+  color: white;
+  font-size: 1.1em;
+}
+button:disabled{
+  background-color: grey;
+}
+.icon{
+  font-size: 1.2em;
+}
+.form{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.container{
+    display: inline-block;
+}
+#searchProgress {
+  width: 100%;
+  background-color: grey;
+}
+#Bar {
+  width: 0%;
+  height: 5px;
+  background-color: green;
+}

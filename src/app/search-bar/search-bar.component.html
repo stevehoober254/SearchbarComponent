@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<div class="searchbar">
+  <form class="form" [formGroup]="searchForm" (ngSubmit)="search()">
+    <div class="container">
+      <label class="label">Keywords / Job Title / Job Ref</label><br>
+      <input type="text" placeholder="e.g Sales Executive" formControlName="Keyword" class="input"  >&nbsp;
+    </div>
+    <div class="container">
+      <label class="label">Location</label><br>
+      <input type="text" placeholder="e.g Town or Postcode" formControlName="Location" class="input" >&nbsp;
+    </div>
+    <div class="container">
+      <label class="label">Distance</label><br>
+      <select type="text" formControlName="Distance" class="input select" >
+        <option value="" disabled selected>Up To 15 Miles</option>
+        <option *ngFor="let n of miles" value="{{n}}">{{n}} Miles</option>
+      </select>&nbsp;
+    </div>
+    <div class="container">
+      <label class="label"></label><br>
+      <button type="submit" [disabled]="!searchForm.valid" ><i class="fa fa-search icon"></i> Find jobs</button>
+    </div>
+  </form>
+  <div id="searchProgress">
+    <div id="Bar"></div>
+  </div>
+</div>
