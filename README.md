@@ -26,6 +26,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on how to use this components in your projects reach out to me stephengachoka57@gmail.com
 
+<strong>
+This project consists of TWO COMPONENTS
+
+    1. RESULTS COMPONENT
+    2. SEARCHBAR COMPONENT
+
+JUST AS THE NAMES SUGGESTS THE INDIVIDUAL COMPONENTS DO THE SAME AS THEIR NAMES, THE RESULTS COMPONENT DISPLAYS THE SEARCH RESULTS WHILE THE SEARCHBAR
+COMPONENT DISPLAY THE SEARCHBAR .
+
+</strong>
+
 
 Examples of Jobs to search for :
 
