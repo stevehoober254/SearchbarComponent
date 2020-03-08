@@ -90,7 +90,7 @@ Examples of Towns to search for :
 
 <strong> N/B: Its okay to search with either uppercase or lowercase CASE WILL NO AFFECT THE SEARCH RESULTS. </strong>
 
-SEE BELOW SCREENSHOTS FO THE PROJECT
-<img src="./src/assets/sreenshots/scrn1.png"><br>
-<img src="./src/assets/sreenshots/scrn2.png"><br>
-<img src="./src/assets/sreenshots/scrn3.png">
+SEE BELOW SCREENSHOTS FO THE PROJECT<br>
+<img src="./src/assets/screenshots/scrn1.png"><br>
+<img src="./src/assets/screenshots/scrn2.png"><br>
+<img src="./src/assets/screenshots/scrn3.png">
