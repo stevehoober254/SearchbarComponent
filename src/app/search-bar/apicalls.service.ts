@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import {Http} from '@angular/http' ;
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -8,17 +8,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ApicallsService {
 
   constructor(
-    private http: HttpClient
+    private http: Http
   ) { }
 
   // make a call to the job search api
 
-  getJobs(keyword: string, location: string, distance: string) {
-
-
+  getJobs() {
     // make the call
-    return this.http.get('https://jobs.github.com/positions.json' + '?description=' + keyword + '&location=' + location+'&distance='+distance)
-
+    return this.http.get('../../assets/data.json').pipe(map(res => res.json().data));
   }
 
 
