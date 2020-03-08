@@ -3,7 +3,15 @@
 
 <div class="container">
     <label class="tag">RESULTS HERE</label>
-<table class="table">
+<table class="table" *ngIf="results !== undefined && results.length !== 0">
+    <tr>
+        <td class="logo" style="background-color: grey;">
+            <label>Company</label>
+        </td>
+        <td class="desc">
+            <label>Job Description</label>
+        </td>
+    </tr>
     <tr *ngFor="let item of results">
         <td class="logo">
             <img [src]="item.company_logo">
@@ -16,4 +24,7 @@
         </td>
     </tr>
 </table>
+<div *ngIf="results === undefined || results.length === 0">
+    <label> Sorry No results found for this search</label>
+</div>
 </div>

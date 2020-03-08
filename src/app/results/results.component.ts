@@ -3,7 +3,6 @@ import { Results } from '../model/results';
 
 
 
-
 @Component({
   selector: 'app-results',
   templateUrl: './results.component.html',

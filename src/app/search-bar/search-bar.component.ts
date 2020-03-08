@@ -60,22 +60,33 @@ export class SearchBarComponent implements OnInit {
 
   }
   getMySearchResults(params) {
-    // in case of all miles 
-    if (params.distance === "all") {
-      this.results = this.data.filter((item) => {
-        return item.jobtitle.toLocaleLowerCase() === params.jobtitle.toLocaleLowerCase() &&
-          item.location.toLocaleLowerCase() === params.location.toLocaleLowerCase() 
-      });
+    // fast start off our progress bar to tell the user sth is happenning
+    let prbarWidth = document.getElementById('Bar');
+    prbarWidth.style.width = 1 + '%';
+    for (var i = 2; i < 101; i++) {
+      prbarWidth.style.width = i + '%';
+      // in case of all miles 
+      if (params.distance === "all") {
+        this.results = this.data.filter((item) => {
+          return item.jobtitle.toLocaleLowerCase() === params.jobtitle.toLocaleLowerCase() &&
+            item.location.toLocaleLowerCase() === params.location.toLocaleLowerCase()
+        });
 
-    } else {
-      // pass params for query
+      } else {
+        // pass params for query
 
-      this.results = this.data.filter((item) => {
-        return item.jobtitle.toLocaleLowerCase() === params.jobtitle.toLocaleLowerCase() &&
-          item.location.toLocaleLowerCase() === params.location.toLocaleLowerCase() &&
-          item.distance.toLocaleLowerCase() === params.distance.toLocaleLowerCase();
-      });
+        this.results = this.data.filter((item) => {
+          return item.jobtitle.toLocaleLowerCase() === params.jobtitle.toLocaleLowerCase() &&
+            item.location.toLocaleLowerCase() === params.location.toLocaleLowerCase() &&
+            item.distance.toLocaleLowerCase() === params.distance.toLocaleLowerCase();
+        });
+      }
     }
+    // rewind progressbar to 0 % N/B this happens so fast bcoz our data is native so i'm delaying the rewind for 2 seconds
+    setTimeout(() => {
+      prbarWidth.style.width = 0 + '%';
+    }, 2000);
+
   }
 
 
