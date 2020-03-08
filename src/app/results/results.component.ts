@@ -10,7 +10,7 @@ import { Results } from '../model/results';
 })
 export class ResultsComponent implements OnInit {
 
-  @Input('results')results: Results ;
+  @Input('results')results: Results [];
 
   constructor(
 

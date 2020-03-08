@@ -71,20 +71,26 @@ Examples of Jobs to search for :
         40. Software Developer 
 
 Examples of Towns to search for :
-        1. Kiambu
-        2. Machakos
-        3. Nakuru
-        4. Nyeri 
-        5. Kisumu
-        6. Nairobi
-        7. Nyeri
-        8. Kilifi
-        9. Kakamega
-        10. Garissa
-        11. Kajiado
-        12. Mandera
-        13. Kericho
-        14. Bungoma
-        15. Kitui
+
+        1.  Kiambu
+        2.  Machakos
+        3.  Nakuru
+        4.  Nyeri 
+        5.  Kisumu
+        6.  Nairobi
+        7.  Nyeri
+        8.  Kilifi
+        9.  Kakamega
+        10.  Garissa
+        11.  Kajiado
+        12.  Mandera
+        13.  Kericho
+        14.  Bungoma
+        15.  Kitui
 
 <strong> N/B: Its okay to search with either uppercase or lowercase CASE WILL NO AFFECT THE SEARCH RESULTS. </strong>
+
+SEE BELOW SCREENSHOTS FO THE PROJECT
+<img src="./src/assets/sreenshots/scrn1.png"><br>
+<img src="./src/assets/sreenshots/scrn2.png"><br>
+<img src="./src/assets/sreenshots/scrn3.png">
